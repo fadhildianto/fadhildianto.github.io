@@ -1,0 +1,304 @@
+/* ===================================
+   Fadhildianto Portfolio — Custom CSS
+   Light Theme & Red Accent Edition
+   =================================== */
+
+/* --- Scroll Reveal Animation --- */
+.reveal-base {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-base.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Typing Cursor --- */
+.typing-cursor {
+  display: inline-block;
+  animation: blink 0.75s step-end infinite;
+  color: #ef4444;
+  font-weight: 300;
+  margin-left: 2px;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* --- Pulse Slow (background decorative elements) --- */
+.animate-pulse-slow {
+  animation: pulse-slow 7s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.06); }
+}
+
+/* --- Subtle Grid Pattern & Background Utility --- */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* --- Dot Pattern Background --- */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(239, 68, 68, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* --- Cursor Glow (desktop only) --- */
+.cursor-glow {
+  position: fixed;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.04) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  transition: left 0.15s ease-out, top 0.15s ease-out;
+}
+@media (max-width: 768px) {
+  .cursor-glow { display: none; }
+}
+
+/* --- White / Glass Card --- */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.glass-card:hover {
+  border-color: rgba(239, 68, 68, 0.3);
+  box-shadow: 0 12px 36px -4px rgba(239, 68, 68, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+}
+
+/* --- Project Card --- */
+.project-card {
+  transition: transform 0.2s ease-out, box-shadow 0.3s, border-color 0.3s;
+}
+.project-card:hover {
+  border-color: rgba(239, 68, 68, 0.35);
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.08), 0 0 25px rgba(239, 68, 68, 0.08);
+}
+
+/* Mock Browser Window Frame for Uncropped Project Screenshots */
+.project-frame {
+  background-color: #f1f5f9;
+  border: 2px solid #cbd5e1;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.05);
+}
+.project-frame-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  background: linear-gradient(to right, #e2e8f0, #f1f5f9);
+  border-bottom: 2px solid #cbd5e1;
+}
+.project-frame-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Timeline Animated Line & Dot --- */
+.timeline-line {
+  position: absolute;
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #ef4444, #f87171, rgba(239, 68, 68, 0.15));
+}
+
+.timeline-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #ef4444;
+  background: #ffffff;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: #ef4444;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.timeline-dot:hover {
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.4);
+}
+.timeline-dot:hover::after {
+  opacity: 1;
+}
+
+/* --- Gradient Text Utility --- */
+.gradient-text {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Gradient Line Under Headings --- */
+.gradient-line {
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(90deg, #ef4444, #f87171, transparent);
+  margin-top: 1rem;
+  border-radius: 3px;
+}
+
+/* --- Tech Marquee --- */
+.marquee-track {
+  display: flex;
+  gap: 1rem;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* --- Social Icon Hover --- */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #64748b;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+.social-icon:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.06);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.15);
+}
+
+/* --- Smooth Custom Scrollbar --- */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(239, 68, 68, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(239, 68, 68, 0.6);
+}
+
+/* --- Back to Top Button --- */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 40;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+/* --- Section Divider --- */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.15), transparent);
+}
+
+/* --- Chip Tag --- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 9999px;
+  color: #475569;
+  background: rgba(239, 68, 68, 0.04);
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+.chip:hover {
+  border-color: rgba(239, 68, 68, 0.5);
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+/* --- Link Arrow Animation --- */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ef4444;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 2px solid rgba(239, 68, 68, 0.3);
+  padding-bottom: 0.25rem;
+  transition: all 0.25s;
+}
+.link-arrow:hover {
+  color: #dc2626;
+  border-color: #dc2626;
+  gap: 0.75rem;
+}
+
+/* --- Selection Color --- */
+::selection {
+  background: rgba(239, 68, 68, 0.15);
+  color: #0f172a;
+}

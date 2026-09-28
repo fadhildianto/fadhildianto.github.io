@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 767">
+<rect width="1366" height="767" fill="#080808"/><rect x="56" y="54" width="1254" height="659" rx="14" fill="#111" stroke="#3a3033"/>
+<rect x="56" y="54" width="260" height="659" rx="14" fill="#0c0c0c"/><text x="88" y="110" font-family="Arial" font-size="22" fill="#ff3258">DASHBOARD</text>
+<g fill="#8f888e" font-family="Arial" font-size="18"><text x="88" y="166">Agenda</text><text x="88" y="210">Kegiatan</text><text x="88" y="254">Peserta</text><text x="88" y="298">Arsip</text><text x="88" y="342">Evaluasi</text><text x="88" y="386">Peta</text></g>
+<rect x="356" y="86" width="422" height="126" rx="10" fill="#171415" stroke="#2f292b"/><text x="384" y="124" font-family="Arial" font-size="18" fill="#ff3258">Aktivitas</text><text x="384" y="170" font-family="Arial" font-size="44" fill="#f0e9f2">24</text>
+<rect x="802" y="86" width="422" height="126" rx="10" fill="#171415" stroke="#2f292b"/><text x="830" y="124" font-family="Arial" font-size="18" fill="#ff3258">Lokasi</text><text x="830" y="170" font-family="Arial" font-size="44" fill="#f0e9f2">12</text>
+<rect x="356" y="244" width="868" height="410" rx="10" fill="#141112" stroke="#2f292b"/><text x="388" y="286" font-family="Arial" font-size="18" fill="#ff3258">Distribusi Kegiatan</text><path d="M410 580 L530 518 640 548 760 438 890 474 1015 372 1160 420" fill="none" stroke="#ff3258" stroke-width="5"/><g fill="#f0e9f2"><circle cx="410" cy="580" r="7"/><circle cx="530" cy="518" r="7"/><circle cx="640" cy="548" r="7"/><circle cx="760" cy="438" r="7"/><circle cx="890" cy="474" r="7"/><circle cx="1015" cy="372" r="7"/><circle cx="1160" cy="420" r="7"/></g>
+<text x="683" y="742" text-anchor="middle" font-family="Arial" font-size="20" fill="#7b7478">MOCKUP PORTFOLIO — ganti dengan screenshot sistem asli</text>
+</svg>

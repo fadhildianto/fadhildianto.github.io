@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 767">
+<rect width="1366" height="767" fill="#080808"/><rect x="48" y="48" width="1270" height="671" rx="14" fill="#111" stroke="#3a3033"/><rect x="82" y="88" width="1202" height="588" rx="10" fill="#d9d7d8"/>
+<path d="M230 170l95-32 76 44 92-46 84 34 71-20 85 51 46 94-55 74-108-8-88 76-102-20-84 35-88-82z" fill="#9d9a9d" stroke="#6b666a" stroke-width="4"/>
+<g fill="#ff3258" stroke="#000" stroke-width="3"><circle cx="286" cy="248" r="11"/><circle cx="450" cy="228" r="11"/><circle cx="606" cy="274" r="11"/><circle cx="716" cy="368" r="11"/><circle cx="842" cy="328" r="11"/><circle cx="1006" cy="430" r="11"/><circle cx="1120" cy="290" r="11"/></g>
+<rect x="92" y="100" width="250" height="74" rx="10" fill="#111" opacity=".94"/><text x="116" y="131" font-family="Arial" font-size="16" fill="#ff3258">PETA PEMBINAAN BAHASA</text><text x="116" y="155" font-family="Arial" font-size="13" fill="#f0e9f2">Sebaran kegiatan di Provinsi Riau</text>
+<rect x="1005" y="108" width="250" height="150" rx="10" fill="#111" opacity=".94"/><text x="1028" y="138" font-family="Arial" font-size="15" fill="#ff3258">Ringkasan Lokasi</text><text x="1028" y="171" font-family="Arial" font-size="13" fill="#f0e9f2">Kabupaten terpilih</text><text x="1028" y="195" font-family="Arial" font-size="26" fill="#f0e9f2">3 kegiatan</text>
+<text x="683" y="700" text-anchor="middle" font-family="Arial" font-size="20" fill="#7b7478">MOCKUP PORTFOLIO — ganti dengan screenshot peta asli</text>
+</svg>
