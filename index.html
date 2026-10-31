@@ -165,8 +165,8 @@
           <div v-reveal="{ delay: 200 }" class="lg:col-span-5 flex justify-center lg:justify-end order-first lg:order-last">
             <div class="relative">
               <div class="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 xl:w-[22rem] xl:h-[22rem] rounded-2xl border border-slate-200 shadow-xl bg-white p-2.5 overflow-hidden">
-                <img src="./assets/images/profile-placeholder.svg" alt="Foto profil Fadhildianto"
-                     class="w-full h-full object-cover rounded-xl" />
+                <img src="./assets/images/fadhildianto-profile.png" alt="Foto profil Fadhildianto"
+                     class="w-full h-full object-cover object-center rounded-xl" />
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@
     <div class="section-divider"></div>
 
     <!-- ===================== ABOUT SECTION ===================== -->
-    <section id="about" class="py-20 sm:py-28 lg:py-32 bg-slate-50/70 relative">
+    <section id="about" class="py-14 sm:py-16 lg:py-20 bg-slate-50/70 relative">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
         <div v-reveal>
           <p class="text-red-600 font-display text-xs tracking-[0.2em] uppercase font-semibold">01 / Tentang Saya</p>
@@ -193,7 +193,7 @@
           <div class="gradient-line"></div>
         </div>
 
-        <div class="grid lg:grid-cols-5 gap-8 lg:gap-14 mt-10 lg:mt-14">
+        <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 mt-8 lg:mt-10">
           <!-- Main Text -->
           <div class="lg:col-span-3 space-y-5" v-reveal="{ delay: 100 }">
             <p class="text-base sm:text-[1.05rem] text-slate-700 leading-relaxed">
@@ -223,7 +223,7 @@
     <div class="section-divider"></div>
 
     <!-- ===================== PROJECTS SECTION ===================== -->
-    <section id="work" class="py-20 sm:py-28 lg:py-32 bg-white relative">
+    <section id="work" class="py-14 sm:py-16 lg:py-20 bg-white relative">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
         <div v-reveal>
           <p class="text-red-600 font-display text-xs tracking-[0.2em] uppercase font-semibold">02 / Portofolio Proyek</p>
@@ -233,7 +233,7 @@
           <div class="gradient-line"></div>
         </div>
 
-        <div class="mt-10 lg:mt-14">
+        <div class="mt-8 lg:mt-10">
           <!-- Featured project -->
           <article v-reveal class="featured-project glass-card overflow-hidden">
             <div class="grid lg:grid-cols-12">
@@ -247,15 +247,15 @@
                 </div>
               </div>
               <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
-                <p class="text-red-600 text-xs tracking-[0.1em] uppercase font-semibold">Proyek unggulan</p>
+                <p class="text-red-600 text-xs tracking-[0.1em] uppercase font-semibold">Sistem informasi berbasis web</p>
                 <h3 class="font-display text-2xl lg:text-[1.9rem] text-slate-900 font-bold mt-2 leading-snug">{{ projects[0].title }}</h3>
                 <p class="text-sm text-slate-600 mt-4 leading-relaxed">{{ projects[0].desc }}</p>
                 <div class="project-quick-facts mt-6">
-                  <div><span>Peran</span><p>{{ projects[0].role }}</p></div>
+                  <div><span>Kontribusi</span><p>{{ projects[0].contribution }}</p></div>
                   <div><span>Hasil</span><p>{{ projects[0].outcome }}</p></div>
                 </div>
                 <div class="flex items-center gap-4 mt-7 flex-wrap">
-                  <button type="button" @click="openProject(projects[0])" class="primary-link-button">Lihat studi kasus</button>
+                  <button type="button" @click="openProject(projects[0])" class="primary-link-button">Lihat detail proyek</button>
                   <span class="text-xs px-3 py-1.5 bg-red-50 text-red-600 rounded-full font-semibold border border-red-200/80">{{ projects[0].status }}</span>
                 </div>
               </div>
@@ -270,11 +270,11 @@
                 <h3 class="font-display text-xl text-slate-900 font-bold mt-2 leading-snug">{{ p.title }}</h3>
                 <p class="text-sm text-slate-600 mt-3 leading-relaxed">{{ p.summary }}</p>
                 <div class="mt-5 pt-4 border-t border-slate-100">
-                  <p class="text-xs uppercase tracking-[0.08em] font-semibold text-slate-400">Peran</p>
-                  <p class="text-sm text-slate-700 mt-1">{{ p.role }}</p>
+                  <p class="text-xs uppercase tracking-[0.08em] font-semibold text-slate-400">Kontribusi</p>
+                  <p class="text-sm text-slate-700 mt-1">{{ p.contribution }}</p>
                 </div>
                 <div class="flex items-center gap-4 mt-6 flex-wrap">
-                  <button type="button" @click="openProject(p)" class="link-arrow">Studi kasus</button>
+                  <button type="button" @click="openProject(p)" class="link-arrow">Lihat detail</button>
                   <a v-if="p.linkUrl" :href="p.linkUrl" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-600 hover:text-red-600 transition-colors">Kunjungi ↗</a>
                 </div>
               </div>
@@ -287,7 +287,7 @@
     <div class="section-divider"></div>
 
     <!-- ===================== SKILLS & TECH SECTION ===================== -->
-    <section id="skills" class="py-20 sm:py-28 lg:py-32 bg-slate-50/70 relative">
+    <section id="skills" class="py-16 sm:py-20 lg:py-24 bg-slate-50/70 relative">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
         <div v-reveal>
           <p class="text-red-600 font-display text-xs tracking-[0.2em] uppercase font-semibold">03 / Keahlian & Teknologi</p>
@@ -333,7 +333,7 @@
     <div class="section-divider"></div>
 
     <!-- ===================== EXPERIENCE SECTION ===================== -->
-    <section id="experience" class="py-20 sm:py-28 lg:py-32 bg-white relative">
+    <section id="experience" class="py-16 sm:py-20 lg:py-24 bg-white relative">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
         <div v-reveal>
           <p class="text-red-600 font-display text-xs tracking-[0.2em] uppercase font-semibold">04 / Pengalaman Kerja</p>
@@ -381,7 +381,7 @@
     <div class="section-divider"></div>
 
     <!-- ===================== EDUCATION SECTION ===================== -->
-    <section id="education" class="py-20 sm:py-28 lg:py-32 bg-slate-50/70 relative">
+    <section id="education" class="py-16 sm:py-20 lg:py-24 bg-slate-50/70 relative">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
         <div v-reveal>
           <p class="text-red-600 font-display text-xs tracking-[0.2em] uppercase font-semibold">05 / Pendidikan</p>
@@ -414,7 +414,7 @@
     <div class="section-divider"></div>
 
     <!-- ===================== CERTIFICATES SECTION ===================== -->
-    <section id="certificates" class="py-20 sm:py-28 lg:py-32 bg-white relative">
+    <section id="certificates" class="py-16 sm:py-20 lg:py-24 bg-white relative">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
         <div v-reveal>
           <p class="text-red-600 font-display text-xs tracking-[0.2em] uppercase font-semibold">06 / Sertifikat & Pelatihan</p>
@@ -452,7 +452,7 @@
     <div class="section-divider"></div>
 
     <!-- ===================== CONTACT SECTION ===================== -->
-    <section id="contact" class="py-20 sm:py-28 lg:py-36 bg-white relative">
+    <section id="contact" class="py-16 sm:py-20 lg:py-24 bg-white relative">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
         <div class="max-w-2xl" v-reveal>
           <p class="text-red-600 font-display text-xs tracking-[0.2em] uppercase font-semibold">07 / Hubungi Saya</p>
@@ -545,9 +545,9 @@
 
     <!-- ===================== PROJECT CASE STUDY ===================== -->
     <div v-if="selectedProject" class="project-modal" role="dialog" aria-modal="true"
-         :aria-label="'Studi kasus ' + selectedProject.title" @click.self="closeProject">
+         :aria-label="'Detail proyek ' + selectedProject.title" @click.self="closeProject">
       <div class="project-modal-content" tabindex="-1">
-        <button type="button" @click="closeProject" class="project-modal-close" aria-label="Tutup studi kasus">
+        <button type="button" @click="closeProject" class="project-modal-close" aria-label="Tutup detail proyek">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg>
         </button>
         <img :src="selectedProject.image" :alt="selectedProject.imageAlt" />
@@ -555,12 +555,7 @@
           <p class="text-red-600 text-xs tracking-[0.1em] uppercase font-semibold">{{ selectedProject.label }}</p>
           <h2 class="font-display text-2xl sm:text-3xl text-slate-900 font-bold mt-2 pr-8">{{ selectedProject.title }}</h2>
           <p class="text-slate-600 leading-relaxed mt-4">{{ selectedProject.desc }}</p>
-          <div class="case-study-grid mt-7">
-            <div><p>Peran</p><span>{{ selectedProject.role }}</span></div>
-            <div><p>Tantangan</p><span>{{ selectedProject.challenge }}</span></div>
-            <div><p>Solusi</p><span>{{ selectedProject.solution }}</span></div>
-            <div><p>Hasil</p><span>{{ selectedProject.outcome }}</span></div>
-          </div>
+          <p class="project-detail-copy mt-6">{{ selectedProject.projectDetail }}</p>
           <div class="flex items-center gap-4 mt-7 flex-wrap">
             <a v-if="selectedProject.linkUrl" :href="selectedProject.linkUrl" target="_blank" rel="noopener noreferrer" class="primary-link-button">Kunjungi proyek</a>
             <span v-else class="text-sm text-slate-500">{{ selectedProject.evidenceNote }}</span>
