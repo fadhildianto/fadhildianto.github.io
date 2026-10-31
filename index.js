@@ -13,8 +13,15 @@ const app = createApp({
       { id: 'skills', label: 'Keahlian' },
       { id: 'experience', label: 'Pengalaman' },
       { id: 'education', label: 'Pendidikan' },
+      { id: 'certificates', label: 'Sertifikat' },
       { id: 'contact', label: 'Kontak' },
     ];
+
+    const profileLinks = {
+      github: 'https://github.com/fadhildianto',
+      linkedin: 'https://www.linkedin.com/in/fadhil-dianto-8b2b3b277',
+      instagram: 'https://www.instagram.com/fadhildianto/',
+    };
 
     const activeSection = ref('top');
     const mobileMenuOpen = ref(false);
@@ -105,12 +112,48 @@ const app = createApp({
       },
     ];
 
+    // --- Certificates Data ---
+    const certificates = [
+      {
+        id: 'bnsp-tkj-2022',
+        title: 'Sertifikat Kompetensi Keahlian Teknik Komputer dan Jaringan',
+        issuer: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+        issuedAt: 'Agustus 2022',
+        skills: ['Teknik Komputer', 'Jaringan'],
+        thumbnail: './assets/images/certificates/sertifikat-kompetensi-tkj-bnsp.jpeg',
+        alt: 'Sertifikat Kompetensi Keahlian Teknik Komputer dan Jaringan dari BNSP atas nama Fadhildianto',
+      },
+    ];
+
+    const selectedCertificate = ref(null);
+
+    function openCertificate(certificate) {
+      selectedCertificate.value = certificate;
+    }
+
+    function closeCertificate() {
+      selectedCertificate.value = null;
+    }
+
+    function handleKeydown(event) {
+      if (event.key === 'Escape') {
+        if (selectedCertificate.value) closeCertificate();
+        if (selectedProject.value) closeProject();
+      }
+    }
+
     // --- Projects Data ---
     const projects = [
       {
         label: 'PROYEK UTAMA · BALAI BAHASA PROVINSI RIAU',
         title: 'Sistem Informasi Terpadu pada Tim Pembinaan Balai Bahasa Provinsi Riau',
         desc: 'Sistem informasi berbasis web untuk mengelola rangkaian proses kegiatan Tim Pembinaan dan Bahasa Hukum BalaI Bahasa Provinsi Riau, mulai dari usulan hingga evaluasi. Setiap tahapan terhubung dalam satu platform, termasuk pengelolaan kegiatan, dokumentasi, dan visualisasi lokasi.',
+        summary: 'Platform terintegrasi untuk mengelola rangkaian kegiatan Tim Pembinaan.',
+        role: 'Analisis proses kerja dan implementasi sistem',
+        challenge: 'Proses kegiatan, dokumen, dan informasi lokasi perlu dikelola dalam satu alur yang lebih terstruktur.',
+        solution: 'Membangun modul Usulan, Agenda, Kegiatan, Peserta, Arsip, Evaluasi, dan Peta dalam satu platform.',
+        outcome: 'Alur informasi kegiatan dapat dikelola secara lebih terpusat, termasuk dokumentasi dan visualisasi lokasi.',
+        evidenceNote: 'Proyek institusi — demo publik tidak tersedia.',
         image: './assets/images/Admin.png',
         imageAlt: 'Pratinjau Sistem Informasi Terpadu Balai Bahasa',
         urlDomain: 'balai-bahasa-riau.go.id / dashboard',
@@ -127,42 +170,60 @@ const app = createApp({
         label: 'MODUL UTAMA · PETA PEMBINAAN BAHASA',
         title: 'Peta Pembinaan Bahasa',
         desc: 'Peta interaktif untuk memvisualisasikan sebaran kegiatan penyuluhan bahasa dan pembinaan lembaga di wilayah Provinsi Riau. Peta menampilkan lokasi kegiatan berdasarkan kabupaten/kota serta memberikan informasi terkait kegiatan pada setiap lokasi.',
+        summary: 'Peta publik untuk melihat sebaran kegiatan pembinaan bahasa di Riau.',
+        role: 'Implementasi peta dan penyajian informasi lokasi',
+        challenge: 'Data kegiatan berdasarkan wilayah perlu lebih mudah dibaca dan dieksplorasi oleh pengguna.',
+        solution: 'Menerapkan peta interaktif Leaflet.js dengan informasi kegiatan pada setiap lokasi.',
+        outcome: 'Sebaran kegiatan dapat ditelusuri melalui peta interaktif yang tersedia untuk publik.',
+        evidenceNote: null,
         image: './assets/images/Peta.png',
         imageAlt: 'Pratinjau Peta Pembinaan Bahasa',
-        urlDomain: 'sembari.kemendikdasmen.go.id/Peta/',
+        urlDomain: 'petari.kemendikdasmen.go.id',
         details: [
           { label: 'Kontribusi', value: 'Implementasi peta dan penyajikan informasi lokasi' },
           { label: 'Teknologi', value: 'Leaflet.js' },
           { label: 'Keahlian', value: 'Strukturisasi data dan visualisasi informasi' },
         ],
-        linkText: 'Detail proyek',
-        linkUrl: 'https://sembari.kemendikdasmen.go.id/Peta/',
+        linkText: 'Kunjungi proyek',
+        linkUrl: 'https://petari.kemendikdasmen.go.id/',
         status: null,
       },
       {
         label: 'PROYEK · WEBSITE INFORMASI',
         title: 'Website Profil & Katalog Putra Printing',
         desc: 'Website informasi untuk memperkenalkan Putra Printing melalui profil usaha, layanan, dan katalog produk secara digital. Website disusun untuk memudahkan pengunjung memperoleh informasi mengenai produk dan layanan yang tersedia.',
+        summary: 'Website profil usaha dan katalog produk Putra Printing.',
+        role: 'Penyesuaian tampilan, penyusunan halaman, dan pengorganisasian informasi',
+        challenge: 'Informasi usaha, layanan, dan produk perlu disajikan secara terstruktur dalam satu situs.',
+        solution: 'Menyusun struktur halaman dan katalog dengan HTML, CSS, Bootstrap, serta JavaScript.',
+        outcome: 'Profil, layanan, dan katalog dapat diakses dalam website publik.',
+        evidenceNote: null,
         image: './assets/images/PutraPrinting1.png',
         images: [
           './assets/images/PutraPrinting1.png',
           './assets/images/PutraPrinting2.png',
         ],
         imageAlt: 'Pratinjau Website Profil Putra Printing',
-        urlDomain: 'putra-printing.com / katalog',
+        urlDomain: 'fadhildianto.github.io/PutraPrinting.github.io/',
         details: [
           { label: 'Kontribusi', value: 'Penyesuaian tampilan, penyusunan halaman, dan pengorganisasian informasi' },
           { label: 'Teknologi', value: 'HTML · CSS · Bootstrap · JavaScript' },
           { label: 'Keahlian', value: 'Perancangan antarmuka · Strukturisasi informasi · Implementasi website' },
         ],
-        linkText: null,
-        linkUrl: null,
+        linkText: 'Kunjungi proyek',
+        linkUrl: 'https://fadhildianto.github.io/PutraPrinting.github.io/',
         status: null,
       },
       {
         label: 'PROYEK · INTERAKSI MANUSIA & KOMPUTER',
         title: 'Website YLO Festival 2024',
         desc: 'Website informasi festival yang menyajikan informasi acara, talent, dan alur pengguna menuju proses pembelian tiket. Proyek ini berfokus pada penyusunan tampilan dan navigasi agar informasi acara dapat disampaikan dengan jelas kepada pengguna.',
+        summary: 'Website informasi festival dengan navigasi menuju proses pembelian tiket.',
+        role: 'Penyusunan halaman, struktur navigasi, dan implementasi antarmuka',
+        challenge: 'Informasi acara dan alur menuju pembelian tiket harus mudah dipahami oleh pengunjung.',
+        solution: 'Menyusun halaman informasi, navigasi, dan user flow yang berorientasi pada pengunjung acara.',
+        outcome: 'Informasi acara, talent, dan alur tiket tersaji dalam struktur halaman yang jelas.',
+        evidenceNote: 'Proyek akademik — demo publik tidak tersedia.',
         image: './assets/images/YLO.png',
         imageAlt: 'Pratinjau Website YLO Festival 2024',
         urlDomain: 'ylofestival2024.com',
@@ -179,6 +240,16 @@ const app = createApp({
 
     // --- Image Carousel State ---
     const activeImageIndices = reactive({});
+
+    const selectedProject = ref(null);
+
+    function openProject(project) {
+      selectedProject.value = project;
+    }
+
+    function closeProject() {
+      selectedProject.value = null;
+    }
 
     function getImageIndex(title) {
       return activeImageIndices[title] || 0;
@@ -240,7 +311,7 @@ const app = createApp({
     let sectionObserver = null;
 
     function setupSectionObserver() {
-      const sectionIds = ['top', 'work', 'about', 'skills', 'experience', 'education', 'contact'];
+      const sectionIds = ['top', 'work', 'about', 'skills', 'experience', 'education', 'certificates', 'contact'];
       const options = {
         rootMargin: '-20% 0px -60% 0px',
         threshold: 0,
@@ -270,6 +341,7 @@ const app = createApp({
 
       // Scroll listener
       window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('keydown', handleKeydown);
       onScroll();
 
       // Section observer
@@ -284,6 +356,7 @@ const app = createApp({
 
     onUnmounted(() => {
       window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('keydown', handleKeydown);
       if (sectionObserver) sectionObserver.disconnect();
       if (typeTimeout) clearTimeout(typeTimeout);
       if (carouselInterval) clearInterval(carouselInterval);
@@ -292,6 +365,7 @@ const app = createApp({
     return {
       // Navigation
       navItems,
+      profileLinks,
       activeSection,
       mobileMenuOpen,
       navScrolled,
@@ -311,7 +385,14 @@ const app = createApp({
       techStack,
       experiences,
       educationList,
+      certificates,
       projects,
+      selectedCertificate,
+      openCertificate,
+      closeCertificate,
+      selectedProject,
+      openProject,
+      closeProject,
       // Carousel
       getImageIndex,
       setImageIndex,

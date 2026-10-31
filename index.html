@@ -7,6 +7,11 @@
   <meta name="keywords" content="Fadhildianto, Sistem Informasi, Analisis Sistem, Basis Data, Leaflet.js, Laravel, MySQL, IT Support, Portofolio" />
   <meta name="author" content="Fadhildianto" />
   <meta name="theme-color" content="#ffffff" />
+  <link rel="canonical" href="https://fadhildianto.github.io/" />
+  <meta property="og:title" content="Fadhildianto — Portofolio" />
+  <meta property="og:description" content="Proyek dan kontribusi Fadhildianto di bidang sistem informasi dan teknologi." />
+  <meta property="og:url" content="https://fadhildianto.github.io/" />
+  <meta property="og:type" content="website" />
   <title>Fadhildianto — Portofolio</title>
   <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml" />
 
@@ -108,7 +113,6 @@
         <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <!-- Text Content -->
           <div v-reveal class="lg:col-span-7">
-            <p class="text-red-600 font-display text-xs sm:text-sm tracking-[0.2em] uppercase mb-4 font-semibold">Portofolio Personal</p>
             <h1 class="font-display text-[2.5rem] sm:text-5xl lg:text-[3.4rem] xl:text-[3.8rem] font-bold leading-[1.1] tracking-tight text-slate-900">
               Halo, saya<br />
               <span class="gradient-text">{{ typedText }}</span><span class="typing-cursor" v-show="showCursor">|</span>
@@ -124,15 +128,15 @@
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
               </a>
               <!-- GitHub -->
-              <a href="#" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener">
+              <a :href="profileLinks.github" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
               </a>
               <!-- LinkedIn -->
-              <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <a :href="profileLinks.linkedin" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               </a>
               <!-- Instagram -->
-              <a href="#" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+              <a :href="profileLinks.instagram" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.897 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.897-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 1 1-2.882 0 1.441 1.441 0 0 1 2.882 0z"/></svg>
               </a>
             </div>
@@ -229,81 +233,53 @@
           <div class="gradient-line"></div>
         </div>
 
-        <div class="mt-10 lg:mt-14 space-y-12">
-          <!-- Project Cards Loop -->
-          <article v-for="(p, idx) in projects" :key="p.title"
-                   class="glass-card project-card p-6 sm:p-8 lg:p-10"
-                   v-reveal="{ delay: (idx % 2 + 1) * 100 }">
-            <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-              <!-- Text Column -->
-              <div class="lg:col-span-5 flex flex-col justify-center" :class="idx % 2 === 1 ? 'order-first lg:order-last' : ''">
-                <p class="text-red-600 text-xs tracking-[0.1em] uppercase font-semibold">{{ p.label }}</p>
-                <h3 class="font-display text-xl sm:text-2xl lg:text-[1.75rem] text-slate-900 font-bold mt-2 leading-snug">
-                  {{ p.title }}
-                </h3>
-                <p class="text-sm sm:text-[0.95rem] text-slate-600 mt-4 leading-relaxed">
-                  {{ p.desc }}
-                </p>
-                <div class="space-y-2 mt-5">
-                  <div v-for="d in p.details" :key="d.label" class="flex gap-3 text-sm">
-                    <span class="text-red-600 font-semibold shrink-0 w-24">{{ d.label }}</span>
-                    <span class="text-slate-700">{{ d.value }}</span>
+        <div class="mt-10 lg:mt-14">
+          <!-- Featured project -->
+          <article v-reveal class="featured-project glass-card overflow-hidden">
+            <div class="grid lg:grid-cols-12">
+              <div class="lg:col-span-7 project-showcase">
+                <div class="project-frame m-5 sm:m-7">
+                  <div class="project-frame-bar">
+                    <span class="project-frame-dot bg-red-400"></span><span class="project-frame-dot bg-amber-400"></span><span class="project-frame-dot bg-emerald-400"></span>
+                    <span class="text-[0.72rem] text-slate-700 font-mono ml-2 font-medium truncate">{{ projects[0].urlDomain }}</span>
                   </div>
-                </div>
-                <div class="flex items-center gap-4 mt-6 flex-wrap">
-                  <a v-if="p.linkUrl" :href="p.linkUrl" target="_blank" rel="noopener" class="link-arrow">
-                    {{ p.linkText }}
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                  </a>
-                  <span v-if="p.status" class="text-xs px-3 py-1.5 bg-red-50 text-red-600 rounded-full font-semibold border border-red-200/80">
-                    {{ p.status }}
-                  </span>
+                  <img :src="projects[0].image" :alt="projects[0].imageAlt" class="featured-project-image" />
                 </div>
               </div>
-
-              <!-- Uncropped Project Image Frame -->
-              <div class="lg:col-span-7" :class="idx % 2 === 1 ? 'order-last lg:order-first' : ''">
-                <div class="project-frame">
-                  <div class="project-frame-bar">
-                    <span class="project-frame-dot bg-red-400"></span>
-                    <span class="project-frame-dot bg-amber-400"></span>
-                    <span class="project-frame-dot bg-emerald-400"></span>
-                    <span class="text-[0.72rem] text-slate-700 font-mono ml-2 font-medium truncate">{{ p.urlDomain }}</span>
-                  </div>
-                  <div class="p-2 sm:p-3 bg-slate-100/90 flex flex-col items-center justify-center relative min-h-[260px] sm:min-h-[300px]">
-                    <!-- Multi-Image Automatic Carousel -->
-                    <template v-if="p.images && p.images.length > 1">
-                      <div class="relative w-full flex items-center justify-center overflow-hidden rounded-lg">
-                        <img v-for="(imgSrc, imgIdx) in p.images"
-                             :key="imgSrc"
-                             :src="imgSrc"
-                             :alt="p.imageAlt + ' ' + (imgIdx + 1)"
-                             class="w-full h-auto max-h-[480px] object-contain rounded-lg border border-slate-200/90 shadow-sm transition-all duration-700 ease-in-out"
-                             :class="getImageIndex(p.title) === imgIdx ? 'opacity-100 scale-100 relative z-10' : 'opacity-0 scale-95 absolute inset-0 z-0 pointer-events-none'" />
-                      </div>
-
-                      <!-- Carousel Pagination Dots -->
-                      <div class="flex items-center justify-center gap-2 mt-3 z-20">
-                        <button v-for="(imgSrc, imgIdx) in p.images"
-                                :key="'dot-' + imgIdx"
-                                @click="setImageIndex(p.title, imgIdx)"
-                                class="h-2.5 rounded-full transition-all duration-300 cursor-pointer"
-                                :class="getImageIndex(p.title) === imgIdx ? 'w-7 bg-red-600' : 'w-2.5 bg-slate-300 hover:bg-slate-400'"
-                                :aria-label="'Gambar ' + (imgIdx + 1)">
-                        </button>
-                      </div>
-                    </template>
-
-                    <!-- Single Image -->
-                    <template v-else>
-                      <img :src="p.image" :alt="p.imageAlt"
-                           class="w-full h-auto max-h-[480px] object-contain rounded-lg border border-slate-200/90 shadow-sm" />
-                    </template>
-                  </div>
+              <div class="lg:col-span-5 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+                <p class="text-red-600 text-xs tracking-[0.1em] uppercase font-semibold">Proyek unggulan</p>
+                <h3 class="font-display text-2xl lg:text-[1.9rem] text-slate-900 font-bold mt-2 leading-snug">{{ projects[0].title }}</h3>
+                <p class="text-sm text-slate-600 mt-4 leading-relaxed">{{ projects[0].desc }}</p>
+                <div class="project-quick-facts mt-6">
+                  <div><span>Peran</span><p>{{ projects[0].role }}</p></div>
+                  <div><span>Hasil</span><p>{{ projects[0].outcome }}</p></div>
+                </div>
+                <div class="flex items-center gap-4 mt-7 flex-wrap">
+                  <button type="button" @click="openProject(projects[0])" class="primary-link-button">Lihat studi kasus</button>
+                  <span class="text-xs px-3 py-1.5 bg-red-50 text-red-600 rounded-full font-semibold border border-red-200/80">{{ projects[0].status }}</span>
                 </div>
               </div>
             </div>
           </article>
+
+          <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-6">
+            <article v-for="(p, idx) in projects.slice(1)" :key="p.title" v-reveal="{ delay: idx * 100 }" class="project-summary-card glass-card overflow-hidden">
+              <img :src="p.image" :alt="p.imageAlt" loading="lazy" decoding="async" class="project-summary-image" />
+              <div class="p-6 flex flex-col flex-1">
+                <p class="text-red-600 text-xs tracking-[0.1em] uppercase font-semibold">{{ p.label }}</p>
+                <h3 class="font-display text-xl text-slate-900 font-bold mt-2 leading-snug">{{ p.title }}</h3>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">{{ p.summary }}</p>
+                <div class="mt-5 pt-4 border-t border-slate-100">
+                  <p class="text-xs uppercase tracking-[0.08em] font-semibold text-slate-400">Peran</p>
+                  <p class="text-sm text-slate-700 mt-1">{{ p.role }}</p>
+                </div>
+                <div class="flex items-center gap-4 mt-6 flex-wrap">
+                  <button type="button" @click="openProject(p)" class="link-arrow">Studi kasus</button>
+                  <a v-if="p.linkUrl" :href="p.linkUrl" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-600 hover:text-red-600 transition-colors">Kunjungi ↗</a>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -437,11 +413,49 @@
 
     <div class="section-divider"></div>
 
+    <!-- ===================== CERTIFICATES SECTION ===================== -->
+    <section id="certificates" class="py-20 sm:py-28 lg:py-32 bg-white relative">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
+        <div v-reveal>
+          <p class="text-red-600 font-display text-xs tracking-[0.2em] uppercase font-semibold">06 / Sertifikat & Pelatihan</p>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-[2.8rem] font-bold text-slate-900 mt-3 tracking-tight leading-tight max-w-3xl">
+            Pembelajaran yang telah dibuktikan.
+          </h2>
+          <div class="gradient-line"></div>
+        </div>
+
+        <div class="mt-10 lg:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article v-for="(certificate, idx) in certificates" :key="certificate.id"
+                   v-reveal="{ delay: idx * 100 }" class="glass-card certificate-card overflow-hidden">
+            <button type="button" class="certificate-preview" @click="openCertificate(certificate)"
+                    :aria-label="'Lihat sertifikat ' + certificate.title">
+              <img :src="certificate.thumbnail" :alt="certificate.alt" loading="lazy" decoding="async" />
+              <span class="certificate-preview-label">Lihat sertifikat</span>
+            </button>
+            <div class="p-6">
+              <p class="text-red-600 text-xs tracking-[0.1em] uppercase font-semibold">{{ certificate.issuer }}</p>
+              <h3 class="font-display text-xl text-slate-900 font-bold mt-2 leading-snug">{{ certificate.title }}</h3>
+              <p class="text-sm text-slate-600 mt-2">Diterbitkan {{ certificate.issuedAt }}</p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span v-for="skill in certificate.skills" :key="skill" class="chip">{{ skill }}</span>
+              </div>
+              <button type="button" @click="openCertificate(certificate)" class="link-arrow mt-5">
+                Lihat sertifikat
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
     <!-- ===================== CONTACT SECTION ===================== -->
     <section id="contact" class="py-20 sm:py-28 lg:py-36 bg-white relative">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 relative">
         <div class="max-w-2xl" v-reveal>
-          <p class="text-red-600 font-display text-xs tracking-[0.2em] uppercase font-semibold">06 / Hubungi Saya</p>
+          <p class="text-red-600 font-display text-xs tracking-[0.2em] uppercase font-semibold">07 / Hubungi Saya</p>
           <h2 class="font-display text-3xl sm:text-4xl lg:text-[2.8rem] font-bold text-slate-900 mt-3 tracking-tight leading-tight">
             Mari Berdiskusi.
           </h2>
@@ -467,15 +481,15 @@
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
             </a>
             <!-- GitHub -->
-            <a href="#" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener">
+            <a :href="profileLinks.github" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
             </a>
             <!-- LinkedIn -->
-            <a href="#" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <a :href="profileLinks.linkedin" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
             <!-- Instagram -->
-            <a href="#" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+            <a :href="profileLinks.instagram" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.897 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.897-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 1 1-2.882 0 1.441 1.441 0 0 1 2.882 0z"/></svg>
             </a>
           </div>
@@ -512,6 +526,48 @@
             aria-label="Kembali ke atas">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
     </button>
+
+    <!-- ===================== CERTIFICATE PREVIEW ===================== -->
+    <div v-if="selectedCertificate" class="certificate-modal" role="dialog" aria-modal="true"
+         :aria-label="selectedCertificate.title" @click.self="closeCertificate" @keydown.esc="closeCertificate">
+      <div class="certificate-modal-content" tabindex="-1">
+        <button type="button" @click="closeCertificate" class="certificate-modal-close" aria-label="Tutup preview sertifikat">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg>
+        </button>
+        <img :src="selectedCertificate.thumbnail" :alt="selectedCertificate.alt" />
+        <div class="p-5 sm:p-6">
+          <p class="text-red-600 text-xs tracking-[0.1em] uppercase font-semibold">{{ selectedCertificate.issuer }}</p>
+          <h2 class="font-display text-xl sm:text-2xl text-slate-900 font-bold mt-2">{{ selectedCertificate.title }}</h2>
+          <p class="text-sm text-slate-600 mt-2">Diterbitkan {{ selectedCertificate.issuedAt }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== PROJECT CASE STUDY ===================== -->
+    <div v-if="selectedProject" class="project-modal" role="dialog" aria-modal="true"
+         :aria-label="'Studi kasus ' + selectedProject.title" @click.self="closeProject">
+      <div class="project-modal-content" tabindex="-1">
+        <button type="button" @click="closeProject" class="project-modal-close" aria-label="Tutup studi kasus">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg>
+        </button>
+        <img :src="selectedProject.image" :alt="selectedProject.imageAlt" />
+        <div class="p-6 sm:p-8">
+          <p class="text-red-600 text-xs tracking-[0.1em] uppercase font-semibold">{{ selectedProject.label }}</p>
+          <h2 class="font-display text-2xl sm:text-3xl text-slate-900 font-bold mt-2 pr-8">{{ selectedProject.title }}</h2>
+          <p class="text-slate-600 leading-relaxed mt-4">{{ selectedProject.desc }}</p>
+          <div class="case-study-grid mt-7">
+            <div><p>Peran</p><span>{{ selectedProject.role }}</span></div>
+            <div><p>Tantangan</p><span>{{ selectedProject.challenge }}</span></div>
+            <div><p>Solusi</p><span>{{ selectedProject.solution }}</span></div>
+            <div><p>Hasil</p><span>{{ selectedProject.outcome }}</span></div>
+          </div>
+          <div class="flex items-center gap-4 mt-7 flex-wrap">
+            <a v-if="selectedProject.linkUrl" :href="selectedProject.linkUrl" target="_blank" rel="noopener noreferrer" class="primary-link-button">Kunjungi proyek</a>
+            <span v-else class="text-sm text-slate-500">{{ selectedProject.evidenceNote }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
