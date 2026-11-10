@@ -94,7 +94,45 @@ const app = createApp({
           { label: 'Dokumentasi', desc: 'mendokumentasikan proses kerja dan mendukung kebutuhan operasional unit kerja.' },
         ],
       },
+      {
+        period: 'September 2021 — Desember 2021',
+        title: 'Magang',
+        company: 'Alpha-M Komputer',
+        location: 'Rengat, Riau',
+        items: [
+          { label: 'Instalasi jaringan', desc: 'melakukan konfigurasi dan instalasi jaringan komputer untuk mendukung kebutuhan operasional.' },
+          { label: 'Infrastruktur SKD CPNS', desc: 'menyiapkan dan mengelola infrastruktur jaringan serta komputer untuk pelaksanaan ujian SKD CPNS Kabupaten Indragiri Hulu 2021.' },
+          { label: 'Maintenance', desc: 'melakukan maintenance dan troubleshooting perangkat komputer secara berkala.' },
+        ],
+        proofs: [
+          {
+            src: './assets/images/internships/alpha-m-komputer/skd-cpns-setup-01.jpg',
+            alt: 'Perangkat komputer untuk pelaksanaan SKD CPNS Kabupaten Indragiri Hulu 2021',
+            caption: 'Penyiapan perangkat untuk pelaksanaan SKD CPNS 2021.',
+          },
+          {
+            src: './assets/images/internships/alpha-m-komputer/skd-cpns-network-02.jpg',
+            alt: 'Penataan kabel jaringan saat magang di Alpha-M Komputer',
+            caption: 'Penataan kabel jaringan untuk mendukung kebutuhan operasional.',
+          },
+          {
+            src: './assets/images/internships/alpha-m-komputer/skd-cpns-setup-03.jpg',
+            alt: 'Ruang perangkat SKD CPNS Kabupaten Indragiri Hulu 2021',
+            caption: 'Dokumentasi infrastruktur komputer SKD CPNS 2021.',
+          },
+        ],
+      },
     ];
+
+    const selectedExperienceProof = ref(null);
+
+    function openExperienceProof(proof) {
+      selectedExperienceProof.value = proof;
+    }
+
+    function closeExperienceProof() {
+      selectedExperienceProof.value = null;
+    }
 
     // --- Education Data ---
     const educationList = [
@@ -139,6 +177,7 @@ const app = createApp({
       if (event.key === 'Escape') {
         if (selectedCertificate.value) closeCertificate();
         if (selectedProject.value) closeProject();
+        if (selectedExperienceProof.value) closeExperienceProof();
       }
     }
 
@@ -380,6 +419,9 @@ const app = createApp({
       classifiedSkills,
       techStack,
       experiences,
+      selectedExperienceProof,
+      openExperienceProof,
+      closeExperienceProof,
       educationList,
       certificates,
       projects,

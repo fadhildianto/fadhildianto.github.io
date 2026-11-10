@@ -227,6 +227,67 @@
   opacity: 1;
 }
 
+/* --- Internship Documentation Gallery --- */
+.experience-proof-gallery {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e2e8f0;
+}
+.experience-proof-label {
+  color: #ef4444;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.experience-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+.experience-proof-item {
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: #fff;
+  color: #475569;
+  cursor: zoom-in;
+  text-align: left;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.experience-proof-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(239, 68, 68, 0.45);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.08);
+}
+.experience-proof-item img {
+  display: block;
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
+}
+.experience-proof-item span {
+  display: -webkit-box;
+  overflow: hidden;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.experience-proof-modal-content {
+  width: min(100%, 64rem);
+}
+.experience-proof-modal-content > img {
+  max-height: min(74vh, 46rem);
+}
+@media (max-width: 640px) {
+  .experience-proof-grid { grid-template-columns: 1fr; }
+  .experience-proof-item img { height: 12rem; }
+}
+
 /* --- Gradient Text Utility --- */
 .gradient-text {
   background: linear-gradient(135deg, #ef4444, #dc2626);
