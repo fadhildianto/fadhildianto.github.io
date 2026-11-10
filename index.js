@@ -93,6 +93,24 @@ const app = createApp({
           { label: 'Visualisasi', desc: 'menerapkan peta interaktif menggunakan Leaflet.js untuk menampilkan sebaran kegiatan.' },
           { label: 'Dokumentasi', desc: 'mendokumentasikan proses kerja dan mendukung kebutuhan operasional unit kerja.' },
         ],
+        proofs: [
+          {
+            src: './assets/images/internships/balai-bahasa-riau/internship-activity-01.jpg',
+            alt: 'Dokumentasi aktivitas pengembangan sistem saat magang di Balai Bahasa Provinsi Riau',
+          },
+          {
+            src: './assets/images/internships/balai-bahasa-riau/internship-activity-02.jpg',
+            alt: 'Dokumentasi aktivitas magang di Balai Bahasa Provinsi Riau',
+          },
+          {
+            src: './assets/images/internships/balai-bahasa-riau/internship-activity-03.jpg',
+            alt: 'Dokumentasi kegiatan di Balai Bahasa Provinsi Riau',
+          },
+          {
+            src: './assets/images/Peta.png',
+            alt: 'Tampilan Peta Pembinaan Bahasa yang dikembangkan saat magang',
+          },
+        ],
       },
       {
         period: 'September 2021 — Desember 2021',
@@ -108,17 +126,14 @@ const app = createApp({
           {
             src: './assets/images/internships/alpha-m-komputer/skd-cpns-setup-01.jpg',
             alt: 'Perangkat komputer untuk pelaksanaan SKD CPNS Kabupaten Indragiri Hulu 2021',
-            caption: 'Penyiapan perangkat untuk pelaksanaan SKD CPNS 2021.',
           },
           {
             src: './assets/images/internships/alpha-m-komputer/skd-cpns-network-02.jpg',
             alt: 'Penataan kabel jaringan saat magang di Alpha-M Komputer',
-            caption: 'Penataan kabel jaringan untuk mendukung kebutuhan operasional.',
           },
           {
             src: './assets/images/internships/alpha-m-komputer/skd-cpns-setup-03.jpg',
             alt: 'Ruang perangkat SKD CPNS Kabupaten Indragiri Hulu 2021',
-            caption: 'Dokumentasi infrastruktur komputer SKD CPNS 2021.',
           },
         ],
       },

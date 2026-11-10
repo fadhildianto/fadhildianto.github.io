@@ -376,10 +376,10 @@
                   <p class="experience-proof-label">Dokumentasi kegiatan</p>
                   <div class="experience-proof-grid">
                     <button v-for="proof in exp.proofs" :key="proof.src" type="button"
-                            class="experience-proof-item" @click="openExperienceProof(proof)"
-                            :aria-label="'Lihat bukti: ' + proof.caption">
+                            class="experience-proof-item" :class="{ 'experience-proof-item--screen': proof.src.includes('Peta.png') }"
+                            @click="openExperienceProof(proof)"
+                            :aria-label="'Lihat dokumentasi: ' + proof.alt">
                       <img :src="proof.src" :alt="proof.alt" loading="lazy" decoding="async" />
-                      <span>{{ proof.caption }}</span>
                     </button>
                   </div>
                 </div>
@@ -557,13 +557,12 @@
 
     <!-- ===================== EXPERIENCE PROOF PREVIEW ===================== -->
     <div v-if="selectedExperienceProof" class="certificate-modal" role="dialog" aria-modal="true"
-         :aria-label="selectedExperienceProof.caption" @click.self="closeExperienceProof">
+         :aria-label="selectedExperienceProof.alt" @click.self="closeExperienceProof">
       <div class="certificate-modal-content experience-proof-modal-content" tabindex="-1">
         <button type="button" @click="closeExperienceProof" class="certificate-modal-close" aria-label="Tutup bukti kegiatan">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6M6 6l12 12"/></svg>
         </button>
         <img :src="selectedExperienceProof.src" :alt="selectedExperienceProof.alt" />
-        <p class="p-5 sm:p-6 text-sm text-slate-600">{{ selectedExperienceProof.caption }}</p>
       </div>
     </div>
 
